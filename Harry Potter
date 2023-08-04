@@ -1,1 +1,194 @@
+programa
+{ //MAL OU BEM? A ESCOLHA É SUA MEU AMIGO(A)
+	inclua biblioteca Util --> u
+	cadeia nome, sobrenome
+    	inteiro consequencia_boa = 1
+    	inteiro  consequencia_ruim = 1
+    	inteiro status = 280  
+    	inteiro consequencia_neutra = 0
+     cadeia primeiroerro 
+     cadeia casa
+
+	
+	funcao inicio()
+	{    
+		escreva("[PROFESSOR] Bem vindo(a) a Hogwarts, pequen@ bruxo(a)\n")
+          u.aguarde(1000)
+	     escreva("[PROFESSOR] Qual é seu nome?")
+	     leia(nome) 
+          escreva("[PROFESSOR] Vamos para o refeitório")
+          conversa_1()
+          proximo(6000)
+          
+
+
+          
+	} //fim inicio
+	
+	funcao conversa_1(){
+		escreva("\n[PROFESSOR] Sou o professor Alastor Moody.\n")
+	     u.aguarde(4000)
+ 		escreva("Então jovem,só para conferir, qual seu sobrenome?\n")  
+ 		leia(sobrenome) 
+ 		escreva("[ALASTOR MOODY] Vamos então, ", sobrenome, ", não vai querer perder a Cerimônia de celeção\n")
+ 		u.aguarde(4000)
+ 		escreva("[PASSOS]") 
+ 		escreva("[PASSOS]\n") 
+ 		u.aguarde(4000)
+ 		escreva("*Você caminha surpreso(a) com a velocidade do professor, que mesmo de bengala, o faz correr*\n") 
+ 		u.aguarde(5000) escreva("*Você passou tanto tempo pensando nisso que quando percebeu ja estava nao refeitório*\n")
+ 		u.aguarde(4000)
+ 		escreva("[PROFESSOR MACABRO] A CERIMÔNIA VAI COMEÇAR!!!!!!\n") 
+ 	     u.aguarde(4000)
+ 		escreva("*Você vê uma garota indo em direção a um chapéu, e isso te causa estranhamento*\n")
+ 		u.aguarde(4000)
+ 		escreva("*Um velho de barba esplica que esse é o chapéu celetor, ele analiza seus mais profundos desejos, e te manda pra casa que achar melhor*\n")
+ 		u.aguarde(5000)          
+ 		escreva("[CHAPÉU SELETOR] Grfinória!!!\n") 
+ 		escreva("[GAROTO] Já é a vigésima vez que cai grifinória, parece que eles deram sorte com os calouros esse ano, *Um garoto fala ao seu lado*\n") 
+	     u.aguarde(5000)
+ 		escreva("[TONY] Aliás, prazer, me chamo Tony, *Ele diz*\n") 
+ 		u.aguarde(5000)
+ 		escreva("[tONY] Qual é, você não fala?\n") 
+		u.aguarde(5000)
+ 		escreva("[VOCÊ] Ah, desculpe, estava esperando ser chamad@ pra seleção de casas mas ainda não fui\n")
+		u.aguarde(5000)
+ 		escreva("[VOCÊ]Me chamo ",nome, ".\n") 
+ 		u.aguarde(5000)
+          escreva("[TONY]Prazer ",nome, ".\n")
+		u.aguarde(5000)
+ 		escreva("[CARINHA QUE TA LENDO OS NOMES] Agh, como se pronúncia esse nome,", nome, " venha para seleção!!!\n") 
+ 		u.aguarde(5000)
+ 		escreva("[NARRADOR] Você pode tirar 4 casas, são elas , Grifinória, Corvinal, Lufa-Lufa e Sonserina, boa sorte!\n") 
+ 		u.aguarde(5000)
+		casa_sorteada()
+          u.aguarde(5000)
+ 		escreva("[TONY] Bom, parece que estamos juntos\n ")  
+ 		u.aguarde(5000)
+ 		escreva("[VOCÊ] É, parece que sim\n")
+ 		u.aguarde(5000)
+		escreva("[NARRADOR] Um tempo passa, você já conheceu sua sala comunal, conheceu algumas pessoas, mas nada te chamou atenção\n")
+ 		u.aguarde(5000)
+ 		escreva("[NARRADOR] O que você mais odeia são as regras, todas sobre não usar magia fora de Hogwartse algumas outras que você considera totalmente entediantes\n")
+ 		u.aguarde(5000) 
+ 		escreva("[NARRADOR] Sua ansiedade está a mil, você se sende desconfortável quando está no dormitório, então mesmo sabendo que é errado, sai para andar pelos corredores de Hogwarts no meio da madrugada\n")
+ 		u.aguarde(5000) 
+ 		escreva("[NARRADOR] Após andar alguns minutos você se acalma e consgue colocar seus sentimentos em ordem, porem o que você menos espera acontece, tem alguem vindo com uma lanterna\n")
+ 		escreva("[NARRADOR] O que você vai escolher? , ", nome, "\n") 
+ 		primeira_encrenca()		
+          
+          
+           
+          
+          
+          } //fim conversa1
+
+          funcao casa_sorteada()     { 
+
+           	inteiro casa_s = u.sorteia(1, 4)
+           	u.aguarde(1000)
+
+          	se(casa_s == 1){ 
+          		
+           		escreva("GRIFINÓRIAA!!!!!!!!!!!!!\n") 
+           		casa = "GRIFINÓRIAA"
+           		
+           	} senao se(casa_s == 2) { 
+           		
+           		escreva( "CORVINAL!!!!!\n")
+           		casa = "CORVINAL"
+           	} senao se(casa_s == 3) { 
+           		
+           		escreva("LUFA-LUFA!!!!!!!!!!\n") 
+           		casa = "LUFA-LUFA"
+           	} senao se(casa_s == 4) { 
+           		
+           		escreva("SONSERINA!!!!!!!!!!!!!\n") 
+           		casa = "SONSERINA"
+           	}
+       
+           
+		}// fim casa sorteada
+
+    		funcao primeira_encrenca() {
+    			
+          	cadeia primeira_escolha
+           	cadeia opcao_1 = " 1-Tem um armário de vassouras a uns 5 metros, porém o barulho e a luz estão vindo daquele caminho \n"
+          	cadeia opcao_2 = " 2-Se você for rápido, talvez consiga correr de volta, mas só talvez. \n"
+           	cadeia opcao_3 = " 3-Uma das portas está aberta agora, para a troca de turno dos seguranças noturnos, mas a distância é grande, tipo uns 100 metros. \n"
+           	cadeia opcao_4 = " 4-Você decide usar um feitiço que criou sozinho, um feitiço de invisibilidade, tem grande chance de dar errado, mas da última vez que você testou ele funcionou \n"
+           	cadeia a1 = "opção 1"
+		 	cadeia a2 = "opção 2"
+		 	cadeia a3 = "opção 3"
+		 	cadeia a4 = "opção 4"
+
+		 	cadeia qw  
+		 
+		 	escreva("Suas escolhas são:\n", opcao_1, opcao_2, opcao_3, ",", opcao_4)
+		 	escreva("digite ",a1,",",a2,",",a3,"ou ", a4, " para realizar as ações")
+		 	leia(primeira_escolha)
+		 	
+		   	se(primeira_escolha == a1){
+		   		
+		   		escreva("Você consegue chegar no armário, mas acaba derrubando uma vassoura e é pego\n") 
+		   		consequencia_boa++
+		   	
+		   	} senao se (primeira_escolha == a2){
+		   		escreva("Você correu o mais rápido que pôde e conseguiu voltar pra o dormitório\n")
+		   		consequencia_ruim++
+		   	}
+
+		   	
+			senao se (primeira_escolha == a3){escreva("Um guarda, mesmo sonolento consegue te ver, você é pego\n") consequencia_boa++}
+			senao se(primeira_escolha == a4){escreva("*invisibilium* Você consegue realizar o feitiço com êxito e faz o caminho de volta pro dormitório competamente invisível ")
+			consequencia_ruim++}
+			senao{escreva("Você demorou muito, quando foi correr, acabou tropeçando, infelizmete acabou sendo pego :(") consequencia_neutra++}
+			u.aguarde(6000)
+			
+			se(consequencia_ruim == 2){
+				
+				escreva("[NARRADOR]Voce encontra uma garota acordada,sentada na poltrona da sala comunal, parece que ela tem algo pra te dizer\n\n\n\n")
+				u.aguarde(4000)
+				
+				escreva("[VOCÊ]Boa noite/n")
+				u.aguarde(4000) 
+				escreva("[GAROTA]Para quem?   [NARRADOR]Ela parecia irritada\n")
+				u.aguarde(4000)
+				escreva("[VOCÊ]Me desculpe, nâo estou entendendo, eu te fiz algo? Acho improvável, já que, nâo sei nem seu nome\n[Narrador]Depois do que você disse ela parecia mais brava ainda/n")
+				u.aguarde(4000)
+				escreva("[GAROTA]Meu nome é Gardenya Hooks, sou a mais inteligente da turma, sangue puro.\n ")
+				u.aguarde(4000)
+				escreva("[VOCÊ]E o que extamente isso tem a ver comigo?/n[NARRADOR]Agora quem estava se irritando era você, como essa garota pode ser tão mesquinha?\n")
+				u.aguarde(4000)
+				escreva("[GARDENYA] Um sangue ruim como você ainda tem coragem de quebrar as regras? A gente poderia ter perdido pontos e assim nunca ganhariamos a taça das casas\n")
+				u.aguarde(6000)
+				escreva("[VOCÊ]Tu me chamou de que sua fedelha mimada?\n")
+				u.aguarde(4000)
+				escreva("[GARDENYA] AGORA VOCÊ PASSOU DOS LIMITES, MEU PAI VAI SABER DISSO SUJEITINHO DE SANGUE RUIM\n\n")
+				u.aguarde(5000)
+				escreva("[NARRADOR]Você perde a paciencia e pega sua varinha\nO unico feitiço de embate que você lembra de ter lido sobre foi o Petrificos Totales\n")
+				u.aguarde(5000)
+				
+          	} //fim consequencia_ruim == 2
+
+		}//fim primeira_encrenca()
+
+
+		funcao exemplos(){
+			se(verdadeiro){
+				se(verdadeiro){
+				
+				}
+			}
+		}
+		funcao proximo(inteiro t)
+		{
+			u.aguarde(t)
+			limpa()
+		}
+
+// fim do programa
+}
+
+		
 
